@@ -1,5 +1,4 @@
 ﻿Public Class CuestionarioTamasicos
-
     Public puntajeTamasicos, contador, respuestas As Integer
     Public mediosPuntos As Double
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
@@ -115,7 +114,7 @@
             puntajeTamasicos = ((contador + mediosPuntos) / 7) * 100
             Me.Hide()
             CuestionarioSatvicos.Show()
-        ElseIf respuestas < 7
+        ElseIf respuestas < 7 Then
             contador = 0
             MsgBox("Falta contestar una o mas preguntas.", vbCritical, "Contestar todo el cuestionario por favor.")
         End If

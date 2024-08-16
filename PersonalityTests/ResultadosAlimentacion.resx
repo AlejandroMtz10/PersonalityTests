@@ -117,22 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Label1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="PsicologiaDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="AlimentacionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>182, 17</value>
-  </metadata>
-  <metadata name="AlimentacionTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>384, 17</value>
-  </metadata>
-  <metadata name="TableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>580, 17</value>
-  </metadata>
-  <metadata name="NumeroRegistroLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="MatriculaLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="RayasicoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -147,7 +132,39 @@
   <metadata name="DescripcionLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="MatriculaLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PsicologiadbDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="AlimentacionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>181, 17</value>
+  </metadata>
+  <metadata name="AlimentacionTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>383, 17</value>
+  </metadata>
+  <metadata name="TableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>579, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAwxJREFUaEPt
+        2ctSGkEUBmAeIhB3iRUtkhi5OShCUBTFgNw0LWr5jFqVMosszEJTeRFEkMtwTTbTU3VyOpnOwpChp5mR
+        UOGvOht17O9HupHBNcsss/wH+V48LX7Ln1YGuZNKP1cqGl+2Pa2VRLER3Kw0AhuV+nLcnnUGhTOCeIp4
+        GGSPYbBf0nvp4zPj27alEUwQxFPEQ90Xh/ryW72+HBtvnSF46Gdw0kdYgthWYgge6m9icL+0rtdfR+TW
+        McFD/x2B3t57vZc6GLuECR7uX0Wg9nJNr3rD1tYxnvNmeOilDqG3e0C7O8WScZnlNEJbpRF4qHlXobYY
+        pncLSsG4bHSMDTsKD4iHbrJAu1s5yyUs4KG6oED1RahsXDo6g/zJrSAeutt56GzlLJWQwMPdfFC8ADsq
+        EU8F8dBJ4GxmqbqRGVlCEk/vngfEn0Isg/QRQTwVxEN7Yx/a8YzejqX/uuEENuwwvF59FpA8ibAE4qkg
+        HhAPanRPb0dSfyz46HiebuqQIJ6dNiJ4UNdT0Irs6s1w8vfCE8PzIJzgUEE8tFZ3oBVO/iwxcTwPO2UQ
+        TwXx0FS2oRlKUJkNW5n3S7+2mKabyJLOZk4TxAPiYeKP/MOo8SxBvDaVeB41miaI16YSz6NGUwTx2lTi
+        edS1JEG8NpV4noaSJIjXphLPInPOVxB/6fF9uXgy6UdfGu//eu72wwd3QL+cVAkb8PDRHYRPnpB+5Qk9
+        bgkb8fDZswLXTxX92mPxbaNsHMDDza9xvoSDeOdLyODZUWkBz4dez4Xt/WdOFs/O+XO3jyBeE8Tzse8v
+        MQ7e+BWuS3eQIF4TxPMZv4QdeJ4rt0IQrw2Bmo18CTvxPDdzCkGU8yWMu8RW8ULvpNgGRRR9gBw17OfF
+        b6sgnt3ith3PI1lC/MYW4m+dwvNIlBAvwD5cQDx1Cs9joYS1pxBLYylKEE9lN6xojI1tVkL+JKotrRHE
+        U6fwPCYlxn8tqHmxxGKYOoXnGVJifDwP+3AB8WXEly3fJbYQRBdwysY4ts4ss8zyz8Tl+gELjnUZ7NAO
+        BwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="Label1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
 </root>

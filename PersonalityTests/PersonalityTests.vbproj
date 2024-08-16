@@ -1,36 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\xunit.core.2.6.1\build\xunit.core.props" Condition="Exists('packages\xunit.core.2.6.1\build\xunit.core.props')" />
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A7BD1EBA-590A-49F2-B5E5-B9DDDB4590DB}</ProjectGuid>
+    <ProjectGuid>{31679757-9FD2-48D1-8ABA-7B45FA1546B3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>PersonalityTests.My.MyApplication</StartupObject>
     <RootNamespace>PersonalityTests</RootNamespace>
     <AssemblyName>PersonalityTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\Proyecto psicologia\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <PublishWizardCompleted>true</PublishWizardCompleted>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -65,72 +52,51 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logo.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestCertificateThumbprint>645BF1C8B8C443B32AF0BAC540BB1E5E7B02C62E</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>PersonalityTests_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <TargetZone>LocalIntranet</TargetZone>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationIcon>LogoPersonalityTests.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="circle_progressbar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\CircleProgressBar.1.0.1\lib\circle_progressbar.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
-      <HintPath>packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942" />
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL" />
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Alejandro\Downloads\itextsharp.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PrivateAssemblies\MySql.Data.DLL</HintPath>
     </Reference>
-    <Reference Include="itextsharp.pdfa">
-      <HintPath>C:\Users\Alejandro\Downloads\itextsharp.pdfa.dll</HintPath>
-    </Reference>
-    <Reference Include="itextsharp.xtra">
-      <HintPath>C:\Users\Alejandro\Downloads\itextsharp.xtra.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
-      <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.24\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.6.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>packages\xunit.assert.2.6.1\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.6.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>packages\xunit.extensibility.core.2.6.1\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.6.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>packages\xunit.extensibility.execution.2.6.1\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.24\lib\net452\Zstandard.Net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -147,46 +113,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccesoPacientes.Designer.vb">
-      <DependentUpon>AccesoPacientes.vb</DependentUpon>
+    <Compile Include="alimentacion.Designer.vb">
+      <DependentUpon>alimentacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="AccesoPacientes.vb">
+    <Compile Include="alimentacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CuestionarioAntecedentes.Designer.vb">
-      <DependentUpon>CuestionarioAntecedentes.vb</DependentUpon>
+    <Compile Include="antecedentes.Designer.vb">
+      <DependentUpon>antecedentes.vb</DependentUpon>
     </Compile>
-    <Compile Include="CuestionarioAntecedentes.vb">
+    <Compile Include="antecedentes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CuestionarioColerico.Designer.vb">
-      <DependentUpon>CuestionarioColerico.vb</DependentUpon>
+    <Compile Include="conexionBD.Designer.vb">
+      <DependentUpon>conexionBD.vb</DependentUpon>
     </Compile>
-    <Compile Include="CuestionarioColerico.vb">
+    <Compile Include="conexionBD.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CuestionarioFlematico.Designer.vb">
-      <DependentUpon>CuestionarioFlematico.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CuestionarioFlematico.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CuestionarioMelancolico.Designer.vb">
-      <DependentUpon>CuestionarioMelancolico.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CuestionarioMelancolico.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="connectionDB.vb" />
     <Compile Include="CuestionarioRayasicos.Designer.vb">
       <DependentUpon>CuestionarioRayasicos.vb</DependentUpon>
     </Compile>
     <Compile Include="CuestionarioRayasicos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CuestionarioSanguineo.Designer.vb">
-      <DependentUpon>CuestionarioSanguineo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CuestionarioSanguineo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CuestionarioSatvicos.Designer.vb">
@@ -195,35 +144,90 @@
     <Compile Include="CuestionarioSatvicos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CuestionarioSignosZodiacales.Designer.vb">
-      <DependentUpon>CuestionarioSignosZodiacales.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CuestionarioSignosZodiacales.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="CuestionarioTamasicos.Designer.vb">
       <DependentUpon>CuestionarioTamasicos.vb</DependentUpon>
     </Compile>
     <Compile Include="CuestionarioTamasicos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.vb">
-      <DependentUpon>Login.vb</DependentUpon>
+    <Compile Include="cuestionario_colerico.Designer.vb">
+      <DependentUpon>cuestionario_colerico.vb</DependentUpon>
     </Compile>
-    <Compile Include="Login.vb">
+    <Compile Include="cuestionario_colerico.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPrincipal.vb">
+    <Compile Include="cuestionario_flematico.Designer.vb">
+      <DependentUpon>cuestionario_flematico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cuestionario_flematico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cuestionario_melancolico.Designer.vb">
+      <DependentUpon>cuestionario_melancolico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cuestionario_melancolico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cuestionario_sanguineo.Designer.vb">
+      <DependentUpon>cuestionario_sanguineo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cuestionario_sanguineo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historialPaciente.Designer.vb">
+      <DependentUpon>historialPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="historialPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historialDB.Designer.vb">
+      <DependentUpon>historialDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="historialDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginPaciente.Designer.vb">
+      <DependentUpon>loginPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loginPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginUsuario.Designer.vb">
+      <DependentUpon>loginUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loginUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nuevoUsuario.Designer.vb">
+      <DependentUpon>nuevoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="nuevoUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pacientes.Designer.vb">
+      <DependentUpon>pacientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pacientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaCarga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaCarga.Designer.vb">
+      <DependentUpon>PantallaCarga.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuPrincipal.Designer.vb">
       <DependentUpon>MenuPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -235,60 +239,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Pacientes.Designer.vb">
-      <DependentUpon>Pacientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Pacientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PantallaDeCarga.Designer.vb">
-      <DependentUpon>PantallaDeCarga.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PantallaDeCarga.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PsicologiaDBDataSet.Designer.vb">
+    <Compile Include="psicologiadbDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PsicologiaDBDataSet.xsd</DependentUpon>
+      <DependentUpon>psicologiadbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PsicologiaDBDataSet.vb">
-      <DependentUpon>PsicologiaDBDataSet.xsd</DependentUpon>
+    <Compile Include="psicologiadbDataSet.vb">
+      <DependentUpon>psicologiadbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RegistrarPaciente.Designer.vb">
-      <DependentUpon>RegistrarPaciente.vb</DependentUpon>
+    <Compile Include="RegistroPaciente.Designer.vb">
+      <DependentUpon>RegistroPaciente.vb</DependentUpon>
     </Compile>
-    <Compile Include="RegistrarPaciente.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistrarUsuarios.Designer.vb">
-      <DependentUpon>RegistrarUsuarios.vb</DependentUpon>
-    </Compile>
-    <Compile Include="RegistrarUsuarios.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="registrosAlimentacion.Designer.vb">
-      <DependentUpon>registrosAlimentacion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="registrosAlimentacion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="registrosAntecedentes.Designer.vb">
-      <DependentUpon>registrosAntecedentes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="registrosAntecedentes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="registrosSignosZodiacales.Designer.vb">
-      <DependentUpon>registrosSignosZodiacales.vb</DependentUpon>
-    </Compile>
-    <Compile Include="registrosSignosZodiacales.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="registroTemperamentos.Designer.vb">
-      <DependentUpon>registroTemperamentos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="registroTemperamentos.vb">
+    <Compile Include="RegistroPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="reporte.Designer.vb">
@@ -303,10 +265,28 @@
     <Compile Include="ResultadosAlimentacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResultadosTemperamentos.Designer.vb">
-      <DependentUpon>ResultadosTemperamentos.vb</DependentUpon>
+    <Compile Include="resultados_temperamentos.Designer.vb">
+      <DependentUpon>resultados_temperamentos.vb</DependentUpon>
     </Compile>
-    <Compile Include="ResultadosTemperamentos.vb">
+    <Compile Include="resultados_temperamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signosZodiacales.Designer.vb">
+      <DependentUpon>signosZodiacales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="signosZodiacales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="temperamentos.Designer.vb">
+      <DependentUpon>temperamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="temperamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestsSignosZodiaco.Designer.vb">
+      <DependentUpon>TestsSignosZodiaco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TestsSignosZodiaco.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="usuarios.Designer.vb">
@@ -317,38 +297,56 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AccesoPacientes.resx">
-      <DependentUpon>AccesoPacientes.vb</DependentUpon>
+    <EmbeddedResource Include="alimentacion.resx">
+      <DependentUpon>alimentacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CuestionarioAntecedentes.resx">
-      <DependentUpon>CuestionarioAntecedentes.vb</DependentUpon>
+    <EmbeddedResource Include="antecedentes.resx">
+      <DependentUpon>antecedentes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CuestionarioColerico.resx">
-      <DependentUpon>CuestionarioColerico.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CuestionarioFlematico.resx">
-      <DependentUpon>CuestionarioFlematico.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CuestionarioMelancolico.resx">
-      <DependentUpon>CuestionarioMelancolico.vb</DependentUpon>
+    <EmbeddedResource Include="conexionBD.resx">
+      <DependentUpon>conexionBD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CuestionarioRayasicos.resx">
       <DependentUpon>CuestionarioRayasicos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CuestionarioSanguineo.resx">
-      <DependentUpon>CuestionarioSanguineo.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CuestionarioSatvicos.resx">
       <DependentUpon>CuestionarioSatvicos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CuestionarioSignosZodiacales.resx">
-      <DependentUpon>CuestionarioSignosZodiacales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CuestionarioTamasicos.resx">
       <DependentUpon>CuestionarioTamasicos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.vb</DependentUpon>
+    <EmbeddedResource Include="cuestionario_colerico.resx">
+      <DependentUpon>cuestionario_colerico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cuestionario_flematico.resx">
+      <DependentUpon>cuestionario_flematico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cuestionario_melancolico.resx">
+      <DependentUpon>cuestionario_melancolico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cuestionario_sanguineo.resx">
+      <DependentUpon>cuestionario_sanguineo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historialPaciente.resx">
+      <DependentUpon>historialPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historialDB.resx">
+      <DependentUpon>historialDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginPaciente.resx">
+      <DependentUpon>loginPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginUsuario.resx">
+      <DependentUpon>loginUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nuevoUsuario.resx">
+      <DependentUpon>nuevoUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pacientes.resx">
+      <DependentUpon>pacientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaCarga.resx">
+      <DependentUpon>PantallaCarga.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.vb</DependentUpon>
@@ -359,29 +357,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pacientes.resx">
-      <DependentUpon>Pacientes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PantallaDeCarga.resx">
-      <DependentUpon>PantallaDeCarga.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegistrarPaciente.resx">
-      <DependentUpon>RegistrarPaciente.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegistrarUsuarios.resx">
-      <DependentUpon>RegistrarUsuarios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="registrosAlimentacion.resx">
-      <DependentUpon>registrosAlimentacion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="registrosAntecedentes.resx">
-      <DependentUpon>registrosAntecedentes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="registrosSignosZodiacales.resx">
-      <DependentUpon>registrosSignosZodiacales.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="registroTemperamentos.resx">
-      <DependentUpon>registroTemperamentos.vb</DependentUpon>
+    <EmbeddedResource Include="RegistroPaciente.resx">
+      <DependentUpon>RegistroPaciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reporte.resx">
       <DependentUpon>reporte.vb</DependentUpon>
@@ -389,15 +366,23 @@
     <EmbeddedResource Include="ResultadosAlimentacion.resx">
       <DependentUpon>ResultadosAlimentacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResultadosTemperamentos.resx">
-      <DependentUpon>ResultadosTemperamentos.vb</DependentUpon>
+    <EmbeddedResource Include="resultados_temperamentos.resx">
+      <DependentUpon>resultados_temperamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signosZodiacales.resx">
+      <DependentUpon>signosZodiacales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="temperamentos.resx">
+      <DependentUpon>temperamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestsSignosZodiaco.resx">
+      <DependentUpon>TestsSignosZodiaco.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usuarios.resx">
       <DependentUpon>usuarios.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -411,128 +396,269 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PersonalityTests_TemporaryKey.pfx" />
-    <None Include="PsicologiaDBDataSet.xsc">
-      <DependentUpon>PsicologiaDBDataSet.xsd</DependentUpon>
+    <None Include="psicologiadbDataSet.xsc">
+      <DependentUpon>psicologiadbDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PsicologiaDBDataSet.xsd">
+    <None Include="psicologiadbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PsicologiaDBDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>psicologiadbDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PsicologiaDBDataSet.xss">
-      <DependentUpon>PsicologiaDBDataSet.xsd</DependentUpon>
+    <None Include="psicologiadbDataSet.xss">
+      <DependentUpon>psicologiadbDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Resources\Diseño sin título.png" />
-    <None Include="Resources\Diseño sin título.gif" />
-    <None Include="Resources\LogoPersonalityTests.png" />
-    <None Include="Resources\SplashScreen.png" />
-    <None Include="Resources\notas45p.png" />
-    <None Include="Resources\BlancoConNegro.png" />
-    <None Include="Resources\FondoVerdePacientes.jpg" />
-    <None Include="Resources\Pacientes %282%29.png" />
-    <None Include="Resources\Paciente.png" />
-    <None Include="Resources\Pacientes.png" />
-    <None Include="Resources\Reporte.png" />
-    <None Include="Resources\Temperamentos.jpg" />
-    <None Include="Resources\signoVirgo.jpg" />
-    <None Include="Resources\signoTauro.jpg" />
-    <None Include="Resources\signosZodiacales.jpg" />
-    <None Include="Resources\signoSagitario.jpg" />
-    <None Include="Resources\signoPicis.jpg" />
-    <None Include="Resources\signoLibra.jpg" />
-    <None Include="Resources\signoLeo.jpg" />
-    <None Include="Resources\signoGeminis.jpg" />
-    <None Include="Resources\signoEscorpio.jpg" />
-    <None Include="Resources\signoCapricornio.jpg" />
-    <None Include="Resources\signoCancer.jpg" />
-    <None Include="Resources\signoAries.jpg" />
-    <None Include="Resources\signoAcuario.jpg" />
-    <None Include="Resources\Sanguineos.jpg" />
-    <None Include="Resources\PsicologiaSimbolo.png" />
-    <None Include="Resources\melancolicos.jpg" />
-    <None Include="Resources\flematicos.jpeg" />
-    <None Include="Resources\colerico.jpeg" />
-    <None Include="Resources\alimentosTamasicos.jpg" />
-    <None Include="Resources\alimentosSatvicos.jpg" />
-    <None Include="Resources\alimentosRayasicos.jpeg" />
+    <None Include="Resources\iniciar.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\alimentos.jpeg" />
-    <None Include="Resources\verde.png" />
-    <None Include="Resources\Rojo.png" />
-    <None Include="Resources\multicolor.jpg" />
-    <None Include="Resources\FondoLogin.jpg" />
-    <None Include="Resources\azul3.png" />
-    <None Include="Resources\azul2.png" />
-    <None Include="Resources\azul.jpg" />
-    <None Include="Resources\Amarillo.png" />
-    <None Include="Resources\Siguiente.png" />
-    <None Include="Resources\aceptar.png" />
-    <None Include="Resources\cancelar.png" />
-    <None Include="Resources\Guardar.png" />
-    <None Include="Resources\Menu.png" />
-    <None Include="Resources\salir.png" />
-    <None Include="Resources\Resultados.png" />
-    <None Include="Resources\Registro.png" />
-    <None Include="Resources\zodiaco.png" />
-    <None Include="Resources\feel.png" />
-    <None Include="Resources\alimentacion.png" />
-    <None Include="Resources\Buscar.png" />
-    <None Include="Resources\configuracion.png" />
-    <None Include="Resources\AgregarUsuario.png" />
-    <None Include="Resources\Usuario.png" />
-    <None Include="Resources\Eliminar.png" />
-    <None Include="Resources\Modificar.png" />
-    <None Include="Resources\Cancelar1.png" />
-    <None Include="Resources\Salir1.png" />
-    <None Include="Resources\Usuarios.png" />
-    <None Include="Resources\Acerca de.png" />
-    <None Include="Resources\opciones.png" />
-    <None Include="Resources\Imprimir.png" />
-    <None Include="Resources\cerrarSesion.png" />
-    <None Include="Resources\ingresar.png" />
-    <None Include="Resources\Registrar paciente.png" />
-    <None Include="Resources\analisis.png" />
-    <None Include="Resources\limpiar.png" />
-    <None Include="Resources\icons8-analysis-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <None Include="Resources\alimentosRayasicos.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <None Include="Resources\alimentosSatvicos.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+    <None Include="Resources\alimentosTamasicos.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pdf.png" />
+    <None Include="Resources\colerico.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\itextsharp.xtra.dll" />
+    <None Include="Resources\flematicos.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\itextsharp.pdfa.dll" />
+    <None Include="Resources\melancolicos.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\itextsharp.dll" />
+    <None Include="Resources\personas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PsicologiaSimbolo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sanguineos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoAcuario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoAries.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoCancer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoCapricornio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoEscorpio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoGeminis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoLeo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoLibra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoPicis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoSagitario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signosZodiacales.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoTauro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoVirgo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Temperamentos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoPersonalityTests.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogoPersonalityTests-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="logo.ico" />
-    <Content Include="PsicologiaDB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="PsicologiaDB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>PsicologiaDB.mdf</DependentUpon>
-    </Content>
-    <None Include="Resources\personas.jpg" />
+    <None Include="Resources\Amarillo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azul.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azul2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azul3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoLogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoVerdePacientes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notas45p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acerca de.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgregarUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alimentacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analisis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrarSesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notas100p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paciente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pacientes %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pacientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registrar paciente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Resultados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Siguiente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zodiaco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacienteImg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multicolor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amarilloDegradado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azul4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\databaseConection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\databaseFailedConection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\databaseSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_settings_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estadoconexion48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historial_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LogoPersonalityTests.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\xunit.core.2.6.1\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\xunit.core.2.6.1\build\xunit.core.props'))" />
+    <Error Condition="!Exists('packages\xunit.core.2.6.1\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\xunit.core.2.6.1\build\xunit.core.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\xunit.core.2.6.1\build\xunit.core.targets" Condition="Exists('packages\xunit.core.2.6.1\build\xunit.core.targets')" />
 </Project>

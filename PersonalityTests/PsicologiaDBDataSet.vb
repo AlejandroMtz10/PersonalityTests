@@ -1,2 +1,4 @@
-﻿Partial Class PsicologiaDBDataSet
+﻿
+
+Partial Class psicologiadbDataSet
 End Class

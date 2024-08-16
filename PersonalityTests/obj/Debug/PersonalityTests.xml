@@ -67,6 +67,11 @@ PersonalityTests
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:PersonalityTests.My.Resources.Resources.amarilloDegradado">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PersonalityTests.My.Resources.Resources.analisis">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -83,6 +88,11 @@ PersonalityTests
 </summary>
 </member>
 <member name="P:PersonalityTests.My.Resources.Resources.azul3">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PersonalityTests.My.Resources.Resources.azul4">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -117,7 +127,27 @@ PersonalityTests
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:PersonalityTests.My.Resources.Resources.database_settings_48px">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PersonalityTests.My.Resources.Resources.databaseConection">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PersonalityTests.My.Resources.Resources.databaseFailedConection">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PersonalityTests.My.Resources.Resources.Eliminar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PersonalityTests.My.Resources.Resources.estadoconexion48px">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -147,6 +177,11 @@ PersonalityTests
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:PersonalityTests.My.Resources.Resources.historial_48px">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PersonalityTests.My.Resources.Resources.Imprimir">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -157,19 +192,9 @@ PersonalityTests
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:PersonalityTests.My.Resources.Resources.itextsharp">
+<member name="P:PersonalityTests.My.Resources.Resources.iniciar">
 <summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:PersonalityTests.My.Resources.Resources.itextsharp_pdfa">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:PersonalityTests.My.Resources.Resources.itextsharp_xtra">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:PersonalityTests.My.Resources.Resources.limpiar">
@@ -207,6 +232,11 @@ PersonalityTests
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:PersonalityTests.My.Resources.Resources.notas100p">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PersonalityTests.My.Resources.Resources.notas45p">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -222,12 +252,22 @@ PersonalityTests
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:PersonalityTests.My.Resources.Resources.pacienteImg">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PersonalityTests.My.Resources.Resources.Pacientes">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:PersonalityTests.My.Resources.Resources.Pacientes__2_">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PersonalityTests.My.Resources.Resources.pdf">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -352,6 +392,11 @@ PersonalityTests
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:PersonalityTests.My.Resources.Resources.Temperamentos">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PersonalityTests.My.Resources.Resources.Usuario">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -372,167 +417,187 @@ PersonalityTests
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet">
+<member name="T:PersonalityTests.psicologiadbDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.AlimentacionDataTable">
+<member name="T:PersonalityTests.psicologiadbDataSet.alimentacionDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.HistorialPacienteDataTable">
+<member name="T:PersonalityTests.psicologiadbDataSet.bitacoraDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.PacientesDataTable">
+<member name="T:PersonalityTests.psicologiadbDataSet.historialpacienteDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.SignosZodiacalesDataTable">
+<member name="T:PersonalityTests.psicologiadbDataSet.pacientesDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.TemperamentosDataTable">
+<member name="T:PersonalityTests.psicologiadbDataSet.signoszodiacalesDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.UsuariosDataTable">
+<member name="T:PersonalityTests.psicologiadbDataSet.temperamentosDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.AlimentacionRow">
+<member name="T:PersonalityTests.psicologiadbDataSet.usuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:PersonalityTests.psicologiadbDataSet.alimentacionRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.HistorialPacienteRow">
+<member name="T:PersonalityTests.psicologiadbDataSet.bitacoraRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.PacientesRow">
+<member name="T:PersonalityTests.psicologiadbDataSet.historialpacienteRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.SignosZodiacalesRow">
+<member name="T:PersonalityTests.psicologiadbDataSet.pacientesRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.TemperamentosRow">
+<member name="T:PersonalityTests.psicologiadbDataSet.signoszodiacalesRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.UsuariosRow">
+<member name="T:PersonalityTests.psicologiadbDataSet.temperamentosRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.AlimentacionRowChangeEvent">
+<member name="T:PersonalityTests.psicologiadbDataSet.usuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:PersonalityTests.psicologiadbDataSet.alimentacionRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.HistorialPacienteRowChangeEvent">
+<member name="T:PersonalityTests.psicologiadbDataSet.bitacoraRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.PacientesRowChangeEvent">
+<member name="T:PersonalityTests.psicologiadbDataSet.historialpacienteRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.SignosZodiacalesRowChangeEvent">
+<member name="T:PersonalityTests.psicologiadbDataSet.pacientesRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.TemperamentosRowChangeEvent">
+<member name="T:PersonalityTests.psicologiadbDataSet.signoszodiacalesRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSet.UsuariosRowChangeEvent">
+<member name="T:PersonalityTests.psicologiadbDataSet.temperamentosRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSetTableAdapters.AlimentacionTableAdapter">
+<member name="T:PersonalityTests.psicologiadbDataSet.usuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:PersonalityTests.psicologiadbDataSetTableAdapters.alimentacionTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSetTableAdapters.HistorialPacienteTableAdapter">
+<member name="T:PersonalityTests.psicologiadbDataSetTableAdapters.bitacoraTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSetTableAdapters.PacientesTableAdapter">
+<member name="T:PersonalityTests.psicologiadbDataSetTableAdapters.historialpacienteTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSetTableAdapters.SignosZodiacalesTableAdapter">
+<member name="T:PersonalityTests.psicologiadbDataSetTableAdapters.pacientesTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSetTableAdapters.TemperamentosTableAdapter">
+<member name="T:PersonalityTests.psicologiadbDataSetTableAdapters.signoszodiacalesTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSetTableAdapters.UsuariosTableAdapter">
+<member name="T:PersonalityTests.psicologiadbDataSetTableAdapters.temperamentosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSetTableAdapters.TableAdapterManager">
+<member name="T:PersonalityTests.psicologiadbDataSetTableAdapters.usuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:PersonalityTests.psicologiadbDataSetTableAdapters.TableAdapterManager">
 <summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member>
-<member name="M:PersonalityTests.PsicologiaDBDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(PersonalityTests.PsicologiaDBDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:PersonalityTests.psicologiadbDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(PersonalityTests.psicologiadbDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Update rows in top-down order.
 </summary>
 </member>
-<member name="M:PersonalityTests.PsicologiaDBDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(PersonalityTests.PsicologiaDBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:PersonalityTests.psicologiadbDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(PersonalityTests.psicologiadbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Insert rows in top-down order.
 </summary>
 </member>
-<member name="M:PersonalityTests.PsicologiaDBDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(PersonalityTests.PsicologiaDBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:PersonalityTests.psicologiadbDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(PersonalityTests.psicologiadbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Delete rows in bottom-up order.
 </summary>
 </member>
-<member name="M:PersonalityTests.PsicologiaDBDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:PersonalityTests.psicologiadbDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
 </member>
-<member name="M:PersonalityTests.PsicologiaDBDataSetTableAdapters.TableAdapterManager.UpdateAll(PersonalityTests.PsicologiaDBDataSet)">
+<member name="M:PersonalityTests.psicologiadbDataSetTableAdapters.TableAdapterManager.UpdateAll(PersonalityTests.psicologiadbDataSet)">
 <summary>
 Update all changes to the dataset.
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<member name="T:PersonalityTests.psicologiadbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
 <summary>
 Update Order Option
 </summary>
 </member>
-<member name="T:PersonalityTests.PsicologiaDBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<member name="T:PersonalityTests.psicologiadbDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

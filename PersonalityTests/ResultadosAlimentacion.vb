@@ -1,8 +1,11 @@
 ﻿Public Class ResultadosAlimentacion
-
     Public rayasico, tamasico, satvico As Integer
+    Private Sub ResultadosAlimentacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'PsicologiadbDataSet.alimentacion' Puede moverla o quitarla según sea necesario.
+        Me.AlimentacionTableAdapter.Fill(Me.PsicologiadbDataSet.alimentacion)
+    End Sub
 
-    Private Sub Resultados_Click(sender As Object, e As EventArgs) Handles Resultados.Click
+    Private Sub Resultados_Click(sender As Object, e As EventArgs) Handles BtnResultados.Click
 
         SatvicoTextBox.Text = CuestionarioSatvicos.puntajeSatvicos & "%"
         TamasicoTextBox.Text = CuestionarioTamasicos.puntajeTamasicos & "%"
@@ -46,7 +49,7 @@
 
             Me.Validate()
             Me.AlimentacionBindingSource.EndEdit()
-            Me.AlimentacionTableAdapter.Update(Me.PsicologiaDBDataSet.Alimentacion)
+            Me.AlimentacionTableAdapter.Update(Me.PsicologiadbDataSet.alimentacion)
             Me.Refresh()
             MsgBox("Se ha guardado con exito, ahora se cerrara esta ventana.", vbInformation, "Guardar.")
             cerrarTodo()
@@ -56,11 +59,6 @@
             MessageBox.Show(ex.Message)
 
         End Try
-    End Sub
-
-    Private Sub ResultadosAlimentacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'PsicologiaDBDataSet.Alimentacion' Puede moverla o quitarla según sea necesario.
-        Me.AlimentacionTableAdapter.Fill(Me.PsicologiaDBDataSet.Alimentacion)
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
@@ -83,4 +81,5 @@
         CuestionarioTamasicos.Close()
         Me.Close()
     End Sub
+
 End Class

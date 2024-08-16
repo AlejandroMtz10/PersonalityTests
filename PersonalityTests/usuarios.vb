@@ -1,131 +1,111 @@
 ﻿Public Class usuarios
-    Dim btnsHabilitados, txtsHabilitados As Boolean
-
-    Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
-        Dim cont As Byte
-        cont = UsuariosTableAdapter.VerificacionUsuario(nombreTxt.Text, telefonoTxt.Text)
-        If cont = 1 Then
-            Me.UsuariosTableAdapter.ValidarUsuario(Me.PsicologiaDBDataSet.Usuarios, nombreTxt.Text, telefonoTxt.Text)
-            btnsHabilitados = True
-            habilitarBtns()
-        Else
-            MessageBox.Show("No hay un usuario que coincida con esas credenciales.")
-            btnsHabilitados = False
-            habilitarBtns()
-            clearTxts()
-        End If
-    End Sub
-
-    Private Sub habilitarTxts()
-
-        If txtsHabilitados = True Then
-            IdUsuarioTextBox.Enabled = True
-            NombreTextBox.Enabled = True
-            ApellidosTextBox.Enabled = True
-            TelefonoTextBox.Enabled = True
-            UsuarioTextBox.Enabled = True
-            PassworTextBox.Enabled = True
-
-        ElseIf txtsHabilitados = False
-
-            IdUsuarioTextBox.Enabled = False
-            NombreTextBox.Enabled = False
-            ApellidosTextBox.Enabled = False
-            TelefonoTextBox.Enabled = False
-            UsuarioTextBox.Enabled = False
-            PassworTextBox.Enabled = False
-
-        End If
+    Dim activos As Integer
+    Dim user, fecha As String
 
 
-    End Sub
+    Private Sub habilitarBotones()
+        If activos = 0 Then
 
-    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
-        Me.Close()
-    End Sub
-
-    Private Sub habilitarBtns()
-
-        If btnsHabilitados = True Then
-
-            BtnEliminar.Enabled = True
-            BtnGuardar.Enabled = True
             BtnModificar.Enabled = True
-            BtnCancelar.Enabled = True
-
-        ElseIf btnsHabilitados = False
-
-            BtnEliminar.Enabled = False
+            BtnEliminar.Enabled = True
             BtnGuardar.Enabled = False
-            BtnModificar.Enabled = False
             BtnCancelar.Enabled = False
 
-        End If
+        ElseIf activos = 1 Then
 
+            BtnModificar.Enabled = False
+            BtnEliminar.Enabled = False
+            BtnGuardar.Enabled = True
+            BtnCancelar.Enabled = True
+
+        End If
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
-        txtsHabilitados = True
-        habilitarTxts()
+        activos = 1
+        habilitarBotones()
+        TelefonoTextBox.ReadOnly = False
+        UsuarioTextBox.ReadOnly = False
+        PassworTextBox.ReadOnly = False
+        TxtConfirmar.ReadOnly = False
     End Sub
 
-    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        activos = 1
+        habilitarBotones()
+
         Try
+            Dim nResp As Byte
+            nResp = MsgBox("¿Realmente desea eliminar esté usuario?", vbYesNo, "Eliminar usuario.")
 
-            Me.UsuariosBindingSource.CancelEdit()
-            txtsHabilitados = False
-            habilitarTxts()
+            If nResp = vbYes Then
+                Me.UsuariosTableAdapter.Delete(UsuarioTextBox.Text)
 
+                'Esto genera un nuevo registro automaticamente en la tabla de bitacora similar a un trigger en sql
+                fecha = Now
+                user = PantallaCarga.user
+                Me.BitacoraTableAdapter.insertarRegistro(user, "Usuarios", "Usuario eliminado", fecha)
+
+                MsgBox("Usuario eliminado exitosamente.", vbInformation, "Eliminado.")
+            End If
+            activos = 0
+            habilitarBotones()
         Catch ex As Exception
-
-            MessageBox.Show(ex.Message)
-
+            MsgBox(ex.Message, vbCritical, "Error.")
         End Try
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
+            If PassworTextBox.Text = TxtConfirmar.Text Then
+                Me.Validate()
+                Me.UsuariosBindingSource.EndEdit()
+                Me.UsuariosTableAdapter.Update(Me.PsicologiadbDataSet.usuarios)
 
-            Me.Validate()
-            Me.UsuariosBindingSource.EndEdit()
-            Me.UsuariosTableAdapter.Update(Me.PsicologiaDBDataSet.Usuarios)
-            Me.Refresh()
-            MessageBox.Show("Cambios guardados exitosamente.")
-            txtsHabilitados = False
-            habilitarTxts()
+                'Esto genera un nuevo registro automaticamente en la tabla de bitacora similar a un trigger en sql
+                fecha = Now
+                user = PantallaCarga.user
+                Me.BitacoraTableAdapter.insertarRegistro(user, "Usuarios", "Registro actualizado", fecha)
 
-        Catch ex As Exception
-
-            MessageBox.Show(ex.Message)
-
-        End Try
-    End Sub
-
-
-    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-        Try
-            Dim nResp As Byte
-
-            nResp = MessageBox.Show("¿Estas seguro de eliminar este registro?",
-                 "Eliminar.", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-            If nResp = 6 Then
-                Me.UsuariosTableAdapter.Delete(IdUsuarioTextBox.Text)
-                MessageBox.Show("Registro se elimino exitosamente.")
-                clearTxts()
+                Me.Refresh()
+                MsgBox("Cambios guardados exitosamente.", vbInformation, "Guardado.")
+                TelefonoTextBox.ReadOnly = True
+                UsuarioTextBox.ReadOnly = True
+                PassworTextBox.ReadOnly = True
+                activos = 0
+                habilitarBotones()
+            Else
+                MsgBox("Las contraseñas no coinciden.", vbCritical, "Error de coincidencia.")
+                PassworTextBox.Focus()
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MsgBox(ex.Message, vbCritical, "Error.")
         End Try
     End Sub
 
-    Private Sub clearTxts()
-        IdUsuarioTextBox.Clear()
-        NombreTextBox.Clear()
-        ApellidosTextBox.Clear()
-        TelefonoTextBox.Clear()
-        UsuarioTextBox.Clear()
-        PassworTextBox.Clear()
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
+        Try
+            Me.UsuariosBindingSource.CancelEdit()
+            MsgBox("Cambios cancelados.", vbInformation, "Cancelar.")
+            TelefonoTextBox.ReadOnly = True
+            UsuarioTextBox.ReadOnly = True
+            PassworTextBox.ReadOnly = True
+            activos = 0
+            habilitarBotones()
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical, "Error.")
+        End Try
+    End Sub
+
+    Private Sub TxtBuscar_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtBuscar.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Enter
+                Me.UsuariosTableAdapter.BuscarUsuario(Me.PsicologiadbDataSet.usuarios, TxtBuscar.Text)
+        End Select
+    End Sub
+
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
+        Me.Close()
     End Sub
 End Class

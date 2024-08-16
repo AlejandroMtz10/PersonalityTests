@@ -1,6 +1,7 @@
 ﻿Public Class CuestionarioRayasicos
     Public puntajeRayasicos, contador, respuestas As Integer
     Public mediosPuntos As Double
+
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
         Me.Close()
     End Sub
@@ -104,16 +105,17 @@
         If MasMenos7.Checked = True Then
             mediosPuntos = mediosPuntos + 0.5
         End If
-        avanzarRayasicos()
+        promediarRayasicos()
     End Sub
-    Public Sub avanzarRayasicos()
+
+    Public Sub promediarRayasicos()
         'Si todas las preguntas son respondidas se podra avanzar al siguiente cuestionario
         If respuestas >= 7 Then
             BtnSiguiente.Enabled = True
             puntajeRayasicos = ((contador + mediosPuntos) / 7) * 100
             Me.Hide()
             CuestionarioTamasicos.Show()
-        ElseIf respuestas < 7
+        ElseIf respuestas < 7 Then
             contador = 0
             MsgBox("Falta contestar una o mas preguntas.", vbCritical, "Contestar todo el cuestionario por favor.")
         End If

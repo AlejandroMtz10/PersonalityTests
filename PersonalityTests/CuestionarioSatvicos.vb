@@ -117,8 +117,8 @@
             Me.Hide()
             ResultadosAlimentacion.Show()
             ResultadosAlimentacion.AlimentacionBindingSource.AddNew()
-            ResultadosAlimentacion.MatriculaTextBox.Text = AccesoPacientes.idPatient
-        ElseIf respuestas < 7
+            ResultadosAlimentacion.MatriculaTextBox.Text = MenuPrincipal.matricula
+        ElseIf respuestas < 7 Then
             contador = 0
             MsgBox("Falta contestar una o mas preguntas.", vbCritical, "Contestar todo el cuestionario por favor.")
         End If
