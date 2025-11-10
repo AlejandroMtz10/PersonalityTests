@@ -21,7 +21,7 @@ El proyecto fue desarrollado para el **Lic. Martín Reyes**.
 
 La siguiente imagen ilustra el menú principal de la aplicación.
 
-![Menú de la Aplicación Personality Tests](documentacion/Personality_Tests.webp)
+![Menú de la Aplicación Personality Tests](Documentación/Personality_Tests.webp)
 
 ---
 
@@ -44,7 +44,7 @@ The project was developed for **Lic. Martín Reyes**.
 
 The following image illustrates the main application menu.
 
-![Personality Tests Application Menu](documentacion/Personality_Tests.webp)
+![Personality Tests Application Menu](Documentación/Personality_Tests.webp)
 
 ---
 
